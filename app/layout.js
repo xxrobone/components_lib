@@ -1,11 +1,10 @@
 import './globals.scss';
 import { Inter } from 'next/font/google';
-import styles from './page.module.scss'
+import styles from './page.module.scss';
 import Nav from './components/navbar/Nav';
 import NavItem from './components/navbar/NavItem';
 import { AiOutlineHome } from 'react-icons/ai';
-import { MdOutlinePersonPin } from 'react-icons/md';
-
+import { MdOutlinePersonPin, MdOutlineAlternateEmail } from 'react-icons/md';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,10 +18,15 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body className={inter.className}>
         <div className={styles.navSpecial}>
-        <Nav>
-          <NavItem title='Home' url='/' icon={<AiOutlineHome />} />
-          <NavItem title='About' url='' icon={<MdOutlinePersonPin />} />
-        </Nav>
+          <Nav>
+            <NavItem title='Home' url='/' icon={<AiOutlineHome />} />
+            <NavItem title='About' url='' icon={<MdOutlinePersonPin />} />
+            <NavItem
+              title='Contact'
+              url=''
+              icon={<MdOutlineAlternateEmail />}
+            />
+          </Nav>
         </div>
         {children}
       </body>
