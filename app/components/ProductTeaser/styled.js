@@ -93,11 +93,14 @@ export const CardTitle = styled.div`
   font-weight: 600;
   text-align: left;
   line-height: 1.25;
-  overflow: hidden;
-   display: -webkit-box;
-   -webkit-line-clamp: 2; /* number of lines to show */
-           line-clamp: 2; 
-   -webkit-box-orient: vertical;
+
+  @media (max-width: 768px) {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
 `;
 
 export const AddToCart = styled.div`
