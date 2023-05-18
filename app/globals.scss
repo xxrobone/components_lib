@@ -36,12 +36,11 @@ html, body {
 
 body {
   color: $color-client-1;
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
-      transparent,
-      rgb(12,12,12)
-    )
-    rgb(0,0,0);
+      rgb(12,12,12),
+      rgb(0,0,0)
+    ); */
 }
 
 article, aside, details, figcaption, figure, footer, header, nav, section, main{
