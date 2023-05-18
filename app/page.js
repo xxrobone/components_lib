@@ -1,8 +1,8 @@
-import Image from 'next/image'
-import styles from './page.module.scss'
-import NavItem from './components/navbar/NavItem'
-import DropDown from './components/navbar/DropDown'
-import DropDownItem from './components/navbar/DropDownItem'
+import Image from 'next/image';
+import styles from './page.module.scss';
+import NavItem from './components/navbar/NavItem';
+import DropDown from './components/navbar/DropDown';
+import DropDownItem from './components/navbar/DropDownItem';
 import { BsCardImage } from 'react-icons/bs';
 import { HiOutlineQueueList } from 'react-icons/hi2';
 import { SiShopify } from 'react-icons/si';
@@ -15,30 +15,35 @@ export default function Home() {
           Component Collection&nbsp;
           <code className={styles.code}>app/components/component-name</code>
         </li> */}
-        <NavItem title='Component Collection app/components/component-name' icon={<SiShopify />} className={styles.desc} url=''>
-        <DropDown>
-              <DropDownItem
-                title='Product teaser'
-                icon={<BsCardImage />}
-                url='/'
-              />
-              <DropDownItem
-                title='Product list'
-                icon={<HiOutlineQueueList />}
-                url='/'
-              />
-            </DropDown>
-          </NavItem>
+        <NavItem
+          title='Component Collection app/components/component-name'
+          icon={<SiShopify />}
+          className={styles.desc}
+          url=''
+        >
+          <DropDown>
+            <DropDownItem
+              title='Product teaser'
+              icon={<BsCardImage />}
+              url='/teaser'
+            />
+            <DropDownItem
+              title='Product list'
+              icon={<HiOutlineQueueList />}
+              url='/'
+            />
+          </DropDown>
+        </NavItem>
         <div>
           <a
-            href="https://robertwagar.se"
-            target="_blank"
-            rel="noopener noreferrer"
+            href='https://robertwagar.se'
+            target='_blank'
+            rel='noopener noreferrer'
           >
             By{' '}
             <Image
-              src="/rob1.png"
-              alt="Robone logo"
+              src='/rob1.png'
+              alt='Robone logo'
               className={styles.roboneLogo}
               width={100}
               height={100}
@@ -51,8 +56,8 @@ export default function Home() {
       <div className={styles.center}>
         <Image
           className={styles.logo}
-          src="/astroHome.png"
-          alt="Astro universe"
+          src='/astroHome.png'
+          alt='Astro universe'
           width={400}
           height={400}
           priority
@@ -61,10 +66,10 @@ export default function Home() {
 
       <div className={styles.grid}>
         <a
-          href="https://github.com/xxrobone/components_libhttps://github.com/xxrobone/components_lib"
+          href='https://github.com/xxrobone/components_libhttps://github.com/xxrobone/components_lib'
           className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+          target='_blank'
+          rel='noopener noreferrer'
         >
           <h2>
             Github <span>-&gt;</span>
@@ -73,10 +78,10 @@ export default function Home() {
         </a>
 
         <a
-          href="/"
+          href='/'
           className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+          target='_blank'
+          rel='noopener noreferrer'
         >
           <h2>
             Check live demo <span>-&gt;</span>
@@ -85,10 +90,10 @@ export default function Home() {
         </a>
 
         <a
-          href="https://robertwagar.se"
+          href='https://robertwagar.se'
           className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+          target='_blank'
+          rel='noopener noreferrer'
         >
           <h2>
             Website <span>-&gt;</span>
@@ -97,10 +102,10 @@ export default function Home() {
         </a>
 
         <a
-          href="/"
+          href='/'
           className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+          target='_blank'
+          rel='noopener noreferrer'
         >
           <h2>
             Codepen <span>-&gt;</span>
@@ -111,5 +116,5 @@ export default function Home() {
         </a>
       </div>
     </main>
-  )
+  );
 }
