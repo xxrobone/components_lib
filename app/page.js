@@ -1,14 +1,34 @@
 import Image from 'next/image'
-import styles from './page.module.css'
+import styles from './page.module.scss'
+import NavItem from './components/navbar/NavItem'
+import DropDown from './components/navbar/DropDown'
+import DropDownItem from './components/navbar/DropDownItem'
+import { BsCardImage } from 'react-icons/bs';
+import { HiOutlineQueueList } from 'react-icons/hi2';
+import { SiShopify } from 'react-icons/si';
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        <li>
+        {/* <li>
           Component Collection&nbsp;
           <code className={styles.code}>app/components/component-name</code>
-        </li>
+        </li> */}
+        <NavItem title='Component Collection app/components/component-name' icon={<SiShopify />} className={styles.desc} url=''>
+        <DropDown>
+              <DropDownItem
+                title='Product teaser'
+                icon={<BsCardImage />}
+                url='/'
+              />
+              <DropDownItem
+                title='Product list'
+                icon={<HiOutlineQueueList />}
+                url='/'
+              />
+            </DropDown>
+          </NavItem>
         <div>
           <a
             href="https://robertwagar.se"
