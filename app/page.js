@@ -4,20 +4,16 @@ import NavItem from './components/navbar/NavItem';
 import DropDown from './components/navbar/DropDown';
 import DropDownItem from './components/navbar/DropDownItem';
 import { BsCardImage } from 'react-icons/bs';
-import { HiOutlineQueueList } from 'react-icons/hi2';
+import { HiOutlineQueueList, HiArrowDownCircle } from 'react-icons/hi2';
 import { SiShopify } from 'react-icons/si';
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        {/* <li>
-          Component Collection&nbsp;
-          <code className={styles.code}>app/components/component-name</code>
-        </li> */}
         <NavItem
-          title='Component Collection app/components/component-name'
-          icon={<SiShopify />}
+          title='Component collection'
+          icon={<HiArrowDownCircle />}
           className={styles.desc}
           url=''
         >
@@ -66,7 +62,7 @@ export default function Home() {
 
       <div className={styles.grid}>
         <a
-          href='https://github.com/xxrobone/components_libhttps://github.com/xxrobone/components_lib'
+          href='https://github.com/xxrobone/components_lib'
           className={styles.card}
           target='_blank'
           rel='noopener noreferrer'

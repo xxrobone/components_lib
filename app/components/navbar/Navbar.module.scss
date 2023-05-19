@@ -16,7 +16,6 @@
   transition: all 0.4s linear;
 }
 
-
 .hide {
   width: 100%;
   z-index: 40;
@@ -45,14 +44,15 @@
 }
 
 .nav_item {
+  padding: 0 1.25rem;
+  margin: 0 0.25rem;
+  height: 100%;
   position: relative;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0 1.25rem;
-  height: 100%;
+  background-color: rgba($callout-rgb, 0.5);
+  border: 1px solid rgba($callout-border-rgb, 0.3);
+  border-radius: 12px;
   cursor: pointer;
-
   
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -60,34 +60,6 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-.nav_item {
-  position: relative;
-  margin: 0 0.25rem;
-  background-color: rgba($callout-rgb, 0.5);
-  border: 1px solid rgba($callout-border-rgb, 0.3);
-  border-radius: 12px;
-}
-
-.link_icon {
-  --button-size: calc(60px * 0.5);
-  width: 32px;
-  height: 32px;
-  padding: 0 0.5rem 0 0;
-   align-items: center;
-   justify-content: center;
-   transition: filter 300ms;
-   color: $color-client-1;
-
-   
-   -webkit-touch-callout: none;
-   -webkit-user-select: none;
-   -khtml-user-select: none;
-   -moz-user-select: none;
-   -ms-user-select: none;
-   user-select: none;
-
 }
 
 .nav_icon {
@@ -101,8 +73,6 @@ a .mobile {
 .menu_icon {
   display: none;
   cursor: pointer;
-
-  
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -114,23 +84,37 @@ a .mobile {
 }
 
 .nav_links {
+  position: relative;
   font-size: $font-size-base;
   font-weight: 400;
   color: $color-client-1;
   font-family: $font-base;
   text-transform: uppercase;
   position: relative;
-
-
-
+  display: flex;
   @media screen and (max-width: 1440px){
     font-size: 1rem;
   }
 }
 
+.link_icon {
+   transition: filter 300ms;
+   color: $color-client-1;
+   
+   -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
 
+.link_title {
+  margin: 0 0.5rem;
+}
 
-.nav_item:hover {
+.nav_item:hover,
+.nav_item:active {
    /* background-color: darken($color-client-2, 5%); */
    background-color: rgba($card-rgb, 0.1) !important;
     border: 1px solid rgba($card-border-rgb, 0.25);
@@ -168,10 +152,10 @@ a .mobile {
     border: none;
     box-shadow: 0 0 2px 2px rgba(8, 8, 8, 0.205);
 
-    &:hover {
+    &:hover,
+    &:active {
       background-color: $color-card-bg;
     }
-    
   }
 
   .nav_icon {
@@ -208,7 +192,8 @@ a .mobile {
       left: 30vw;
       height: fit-content;
 
-      &:hover {
+      &:hover,
+      &:active {
         background-color: rgba($card-rgb, 0.1) !important;
         border: 1px solid rgba($card-border-rgb, 0.25);
       }
@@ -301,7 +286,7 @@ a .mobile {
     user-select: none;
     }
   }
-
+  
   .nav_item a:before {
    opacity: 0;  
   }
