@@ -1,11 +1,9 @@
+'use client'
 import Image from 'next/image';
 import styles from './page.module.scss';
 import NavItem from './components/navbar/NavItem';
-import DropDown from './components/navbar/DropDown';
-import DropDownItem from './components/navbar/DropDownItem';
 import { BsCardImage } from 'react-icons/bs';
 import { HiOutlineQueueList, HiArrowDownCircle } from 'react-icons/hi2';
-import { SiShopify } from 'react-icons/si';
 
 export default function Home() {
   return (
@@ -16,20 +14,19 @@ export default function Home() {
           icon={<HiArrowDownCircle />}
           className={styles.desc}
           url=''
-        >
-          <DropDown>
-            <DropDownItem
-              title='Product teaser'
-              icon={<BsCardImage />}
-              url='/teaser'
-            />
-            <DropDownItem
-              title='Product list'
-              icon={<HiOutlineQueueList />}
-              url='/'
-            />
-          </DropDown>
-        </NavItem>
+        />
+        <NavItem
+          title='Product teaser'
+          icon={<BsCardImage />}
+          url='/teaser'
+          className={styles.desc}
+        />
+        <NavItem
+          title='Slider'
+          icon={<HiOutlineQueueList />}
+          url='/slider'
+          className={styles.desc}
+        />
         <div>
           <a
             href='https://robertwagar.se'

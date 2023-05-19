@@ -6,20 +6,20 @@ import Link5Img from 'public/images/astroContact.jpg';
 
 export const carouselData = [
   {
-    title: 'home',
-    text: '/',
+    title: 'title',
+    text: 'desc text',
     id: 1,
     img: Link1Img,
   },
   {
     title: 'Hola',
-    text: '/about',
+    text: 'some text',
     id: 2,
     img: Link2Img,
   },
   {
     title: 'Hello',
-    text: '/projects',
+    text: 'some text',
     id: 3,
     img: Link3Img,
   },

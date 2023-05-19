@@ -1,7 +1,18 @@
 .slider {
-    margin: 1rem;
+    margin: 1rem auto;
+    max-height: 400px;
     position: relative;
     overflow: hidden;
+
+    @media screen and (min-width: 768px) {
+        width: 400px;
+        height: auto;
+  }
+
+    ::-webkit-scrollbar { 
+        width: 0;
+        height: 0;
+    }
   }
   
   .slide_container {
@@ -14,49 +25,9 @@
     overflow: scroll;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
-    overflow-x: scroll;
-   
+    overflow-x: scroll; 
   }
 
-  ::-webkit-scrollbar { 
-    width: 0;
-    height: 0;
-}
-  
-  .slide_arrow {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    width: 4rem;
-    padding: 0;
-    height: 4rem;
-    display: flex;
-    background-color: rgb(24, 24, 24, 0.560);
-    border: none;
-    font-size: 3rem;
-    color: rgb(231, 230, 230);
-    transition: background 0.2s ease;
-    cursor: pointer;
-  }
-  
-  .slide_arrow:hover,
-  .slide_arrow:focus {
-    background-color: rgb(61, 61, 61);
-  }
-  
-  .prev_btn {
-    left: 0;
-    text-align: center;
-    padding-left: 1.5rem;
-    border-radius: 50%;
-  }
-  
-  .next_btn {
-    right: 0;
-    padding-left: 1.5rem;
-    border-radius: 50%;
-  }
   
   .slide {
     width: 100%;
@@ -68,10 +39,15 @@
     scroll-snap-align: start;
   }
   
-  .slide img {
+  .slide > img {
     margin: 0 auto;
-    width: 100%;
+    width: 300px;
     height: auto;
+
+    @media screen and (min-width: 768px) {
+            width: 100vw;
+            height: auto;
+      }
   }
 
   .slide h2 {
@@ -86,22 +62,39 @@
     font-family: inherit;
   }
 
-  @media screen and (min-width: 768px) {
-    .slide img {
-        width: 400px;
-    }
+  .slide_arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    margin: auto;
+    width: 4rem;
+    padding: 0;
+    height: 4rem;
+    display: flex;
+    background-color: rgba(41, 122, 118, 0.56);
+    border: none;
+    font-size: 3rem;
+    color: rgb(231, 230, 230);
+    transition: background 0.2s ease;
+    cursor: pointer;
   }
   
-  footer {
-    padding: 1em;
+  .slide_arrow:hover,
+  .slide_arrow:focus {
+    background-color: rgb(23, 221, 221);
+  }
+  
+  .prev_btn {
+    left: 0;
     text-align: center;
-    letter-spacing: 2px;
-    color: silver;
-    background-color: #121212;
+    padding-left: 1.5rem;
+    padding-bottom: 1rem;
+    border-radius: 50%;
   }
   
-  footer a {
-    color: white;
-    text-decoration: none;
+  .next_btn {
+    right: 0;
+    padding-left: 1.5rem;
+    border-radius: 50%;
   }
-  
