@@ -43,7 +43,7 @@ export const ProductCardWrapper = styled.div`
 
   & > img {
     position: absolute;
-    bottom: 0;
+    bottom: 2px;
     right: 2.5rem;
 
     @media (max-width: 768px) {
