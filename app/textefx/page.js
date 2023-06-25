@@ -13,6 +13,18 @@ const page = () => {
       <p>Hover to split text:</p>
         <TitleEfx title='The effect is in the text hover' />
       </div>
+      <section>
+        
+      </section>
+      <section>
+
+      </section>
+      <section>
+
+      </section>
+      <section>
+
+      </section>
     </div>
   );
 };
