@@ -1,9 +1,13 @@
-'use client'
+'use client';
 import Image from 'next/image';
 import styles from './page.module.scss';
 import NavItem from './components/navbar/NavItem';
 import { BsCardImage } from 'react-icons/bs';
-import { HiOutlineQueueList, HiArrowDownCircle } from 'react-icons/hi2';
+import {
+  HiOutlineQueueList,
+  HiArrowDownCircle,
+  HiArchiveBoxArrowDown,
+} from 'react-icons/hi2';
 
 export default function Home() {
   return (
@@ -25,6 +29,12 @@ export default function Home() {
           title='Slider'
           icon={<HiOutlineQueueList />}
           url='/slider'
+          className={styles.desc}
+        />
+        <NavItem
+          title='texts'
+          icon={<HiArchiveBoxArrowDown />}
+          url='/textefx'
           className={styles.desc}
         />
         <div>
