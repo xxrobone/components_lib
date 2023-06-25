@@ -42,36 +42,15 @@
  .title:hover .word .letter:nth-child(2n) {
     transform: translate(0%, -10%) rotate(-6deg);
 }
- .title:hover .word .letter:nth-child(3n) {
+ .title:hover .word .letter:nth-child(6n) {
     transform: translate(0%, 20%) rotate(5deg);
 }
  .title:hover .word .letter:nth-child(4n) {
     transform: translate(0%, -30%) rotate(-5deg);
 }
  .title:hover .word .letter:nth-child(5n) {
-    transform: translate(0%, 10%) rotate(8deg);
-} 
- .title:hover .word .letter:nth-child(6n) {
-    transform: translate(0%, -30%) rotate(-12deg);
-}
- .title:hover .word .letter:nth-child(7n) {
-    transform: translate(0%, 60%) rotate(10deg);
-}
- .title:hover .word .letter:nth-child(8n) {
-    transform: translate(0%, -15%) rotate(-12deg);
-}
- .title:hover .word .letter:nth-child(9n) {
-    transform: translate(0%, 8%) rotate(15deg);
-}
- .title:hover .word .letter:nth-child(10n) {
-    transform: translate(0%, -10%) rotate(-9deg);
-}
- .title:hover .word .letter:nth-child(11n) {
-    transform: translate(0%, 42%) rotate(6deg);
-}
- .title:hover .word .letter:nth-child(12n) {
     transform: translate(0%, -17%) rotate(-5deg);
 }
- .title:hover .word .letter:nth-child(13n) {
+ .title:hover .word .letter:nth-child(3n) {
     transform: translate(120%, 110%) rotate(-10deg);
 }

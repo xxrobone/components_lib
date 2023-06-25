@@ -11,7 +11,7 @@ const page = () => {
      
       <div className={styles.component_wrapper}>
       <p>Hover to split text:</p>
-        <TitleEfx title='What ever we write here' />
+        <TitleEfx title='The effect is in the text hover' />
       </div>
     </div>
   );
