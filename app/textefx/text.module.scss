@@ -16,6 +16,14 @@
     .component_wrapper {
         max-width: 60%;
         margin: 0 auto;
+
+        p {
+            text-align: left;
+            font-family: monospace;
+            font-size: 0.8rem;
+            margin: 1rem 0;
+            padding: 0 1rem;
+        }
     }
 
 }

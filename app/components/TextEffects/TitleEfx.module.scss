@@ -9,17 +9,20 @@
     color: #fe5858;
     border-radius: 10px;
     break-inside: avoid;
+    cursor: pointer;
   }
 
 .word {
     position: relative;
     display: inline-block;
     padding: 0 0.2rem;
+    pointer-events: none;
 }
 
 .letter {
     display: inline-flex;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    pointer-events: none;
 }
 
 
@@ -28,10 +31,11 @@
     text-shadow: 1px 1px 1px #fe5858;
     background-color: #fafafa;
       color: #121212;
+     
 }
 
  .title:hover .word .letter:nth-child(1) {
-  position: absolute;
+
     transform: translate(-110%, -100%) rotate(10deg);
     
 }

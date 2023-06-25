@@ -8,8 +8,9 @@ const page = () => {
   return (
     <div className={styles.texts}>
       <h2>Text effects</h2>
-      <p>Hover to split text</p>
+     
       <div className={styles.component_wrapper}>
+      <p>Hover to split text:</p>
         <TitleEfx title='What ever we write here' />
       </div>
     </div>
