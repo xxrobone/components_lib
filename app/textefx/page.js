@@ -1,6 +1,6 @@
 import React from 'react';
 import { TitleEfx } from '../components/TextEffects/TitleEfx';
-
+import TextAnimation from '../components/TextEffects/TextAnimations';
 //styles
 import styles from './text.module.scss';
 
@@ -14,7 +14,7 @@ const page = () => {
         <TitleEfx title='The effect is in the text hover' />
       </div>
       <section>
-        
+        <TextAnimation text='Text to animate'/>
       </section>
       <section>
 

@@ -1,11 +1,50 @@
-import React from 'react'
+'use client';
+import React, { useRef, useEffect } from 'react';
+import styles from './TextAnimation.module.scss';
 
-import styles from './TextAnimation.module.scss'
+const TextAnimation = ({ text }) => {
+  const textRef = useRef();
+  const letterRef = useRef();
 
-const page = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      console.log('entry ', entry);
+
+      if (entry.isIntersecting) {
+        textRef.current.classList.add(`${styles.animate}`);
+        textRef.current.classList.add(`${styles.animate}`);
+        textRef.current.classList.remove(`${styles.stop}`);
+      } else {
+        textRef.current.classList.remove(`${styles.animate}`);
+        textRef.current.classList.add(`${styles.stop}`);
+      }
+
+      /*    if (!entry.isIntersecting) {
+      observer.unobserve(entry);
+    } else {
+    } */
+    });
+    observer.observe(textRef.current, letterRef.current);
+    console.log('textRef', textRef.current);
+  }, []);
+
   return (
-    <div className={styles.text_animations}>TitleAnimations</div>
-
+    <h2 ref={textRef} className={`${styles.textToSplit} ${styles.fadeInRight}`}>
+      {text.split(' ').map((word, idx) => {
+        return (
+          <span key={idx} className={styles.word}>
+            {word.split('').map((letter, i) => {
+              return (
+                <span className={`${styles.textSplit}`} ref={letterRef} key={i}>
+                  {letter}
+                </span>
+              );
+            })}
+          </span>
+        );
+      })}
+    </h2>
     /* 
     blue print html
     the classes used in css for animations and in js for splitting the text,
@@ -28,10 +67,10 @@ const page = () => {
 
     
     */
-  )
-}
+  );
+};
 
-export default page
+export default TextAnimation;
 
 /* 
 The blue print from my portfolio website
@@ -99,4 +138,38 @@ function replaceClass(classN, newClassN) {
   let target = document.getElementsByClassName(`${classN}`)[1];
   target.className = newClassN;
 }
+*/
+
+/*
+const TextAnimation = ({ text }) => {
+  const { ref: textRef, inView: textIsVisible } = useInView();
+  const { ref: letterRef, inView: letterIsVisible } = useInView();
+
+  textIsVisible ? console.log('is visible') : console.log('not visible');
+  letterIsVisible
+    ? console.log('letter is visible')
+    : console.log('not visible');
+
+  return (
+    <h2
+      ref={textRef}
+      className={`${styles.textToSplit} ${styles.fadeInRight} ${
+        textIsVisible ? styles.stop : styles.animate
+      }`}
+    >
+      {text.split(' ').map((word, idx) => {
+        return (
+          <span key={idx}>
+            {word.split('').map((letter, i) => {
+              return (
+                <span className={`${styles.textSplit}`} ref={letterRef} key={i}>
+                  {letter}
+                </span>
+              );
+            })}
+          </span>
+        );
+      })}
+    </h2>
+
 */

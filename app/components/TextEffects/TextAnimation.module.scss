@@ -1,6 +1,3 @@
-.text_animation {
-   
-
     .animate {
         -webkit-animation-play-state: running;
                 animation-play-state: running;
@@ -17,14 +14,17 @@
                 animation-play-state: paused;
     }
     
-    span,
-    span.textSplit {
+    .word {
+        padding: 0 0.5rem;
+    }
+
+    .textSplit {
         color: goldenrod;
         font-weight: 700;
         letter-spacing: 4px;
     }
     
-    span:nth-child(even) {
+    .textSplit:nth-child(even) {
         color:#323232;
     }
     
@@ -120,5 +120,3 @@
     }
     
     }
-    
-}
