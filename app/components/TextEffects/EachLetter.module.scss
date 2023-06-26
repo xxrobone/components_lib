@@ -1,0 +1,122 @@
+.animate {
+    -webkit-animation-play-state: running;
+            animation-play-state: running;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.stop {
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+}
+
+.word {
+    padding: 0 0.5rem;
+}
+
+.textSplit {
+    color: goldenrod;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.textSplit:nth-child(even) {
+    color:#323232;
+}
+
+/* Slide Animations */
+.slideInLeft {
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;	   
+}
+
+.slideInLeft:nth-child(odd) {
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+        -webkit-transform: translateX(100vw);
+    -ms-transform: translateX(100vw);
+        transform: translateX(100vw);
+}
+
+@-webkit-keyframes slideInLeft {
+    from {
+        -webkit-transform: translateX(-100vw);
+        transform: translateX(-100vw);
+}
+to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}}
+
+@keyframes slideInLeft {
+    from {
+        -webkit-transform: translateX(-100vw);
+        transform: translateX(-100vw);
+}
+to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}}
+/* ---------------------- */
+
+.fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+}
+@-webkit-keyframes fadeInRight {
+    from {
+    opacity: 0;
+    -webkit-transform: translateX(2.5rem);
+    transform: translateX(2.5rem);
+}
+to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+}}
+@keyframes fadeInRight {
+    from {
+    opacity: 0;
+    -webkit-transform: translateX(2.5rem);
+    transform: translateX(2.5rem);
+}
+to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+}}
+
+
+.highlightText:nth-child(odd){  
+    padding:0 10px;
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #575757), color-stop(50%, transparent));
+    background: -o-linear-gradient(left, #575757 50%, transparent 50%);
+    background: linear-gradient(to right, #575757 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    -webkit-animation-name: hilight;
+    animation-name: hilight;
+
+}
+
+@-webkit-keyframes hilight{
+0% {
+}
+100% {
+    background-position: left bottom;
+}
+
+}
+
+@keyframes hilight{
+0% {
+}
+100% {
+    background-position: left bottom;
+}
+
+}

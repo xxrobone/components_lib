@@ -14,32 +14,18 @@
                 animation-play-state: paused;
     }
     
-    .word {
-        padding: 0 0.5rem;
-    }
-
-    .textSplit {
+    .textInView {
         color: goldenrod;
         font-weight: 700;
         letter-spacing: 4px;
+        transform: translateX(0);
     }
     
-    .textSplit:nth-child(even) {
-        color:#323232;
-    }
     
     /* Slide Animations */
     .slideInLeft {
         -webkit-animation-name: slideInLeft;
         animation-name: slideInLeft;	   
-    }
-    
-    .slideInLeft:nth-child(odd) {
-        -webkit-animation-name: slideInLeft;
-        animation-name: slideInLeft;
-            -webkit-transform: translateX(100vw);
-        -ms-transform: translateX(100vw);
-            transform: translateX(100vw);
     }
     
     @-webkit-keyframes slideInLeft {
@@ -70,40 +56,41 @@
     @-webkit-keyframes fadeInRight {
         from {
         opacity: 0;
-        -webkit-transform: translateX(2.5rem);
-        transform: translateX(2.5rem);
+        -webkit-transform: translateX(-800px);
+        transform: translateX(-800px);
     }
     to {
         opacity: 1;
-        -webkit-transform: none;
-        transform: none;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
     }}
+
     @keyframes fadeInRight {
         from {
         opacity: 0;
-        -webkit-transform: translateX(2.5rem);
-        transform: translateX(2.5rem);
+        -webkit-transform: translateX(-800px);
+        transform: translateX(-800px);
     }
     to {
         opacity: 1;
-        -webkit-transform: none;
-        transform: none;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
     }}
     
     
-    .highlightText:nth-child(odd){  
+    .highlightText {  
         padding:0 10px;
         background: -webkit-gradient(linear, left top, right top, color-stop(50%, #575757), color-stop(50%, transparent));
         background: -o-linear-gradient(left, #575757 50%, transparent 50%);
         background: linear-gradient(to right, #575757 50%, transparent 50%);
         background-size: 200% 100%;
         background-position: right bottom;
-        -webkit-animation-name: hilight;
-        animation-name: hilight;
+        -webkit-animation-name: textHighlight;
+        animation-name: textHighlight;
     
     }
     
-    @-webkit-keyframes hilight{
+    @-webkit-keyframes textHighlight{
     0% {
     }
     100% {
@@ -112,7 +99,7 @@
     
     }
     
-    @keyframes hilight{
+    @keyframes textHighlight{
     0% {
     }
     100% {

@@ -8,23 +8,19 @@ const page = () => {
   return (
     <div className={styles.texts}>
       <h2>Text effects</h2>
-     
+
       <div className={styles.component_wrapper}>
-      <p>Hover to split text:</p>
+        <p>Hover to split text:</p>
         <TitleEfx title='The effect is in the text hover' />
       </div>
       <section>
-        <TextAnimation text='Text to animate'/>
+        <TextAnimation text='Animate from right' animationVariant='fromRight' />
       </section>
       <section>
-
+        <TextAnimation text='Aniamte from left' animationVariant='fromLeft' />
       </section>
-      <section>
-
-      </section>
-      <section>
-
-      </section>
+      <section></section>
+      <section></section>
     </div>
   );
 };
