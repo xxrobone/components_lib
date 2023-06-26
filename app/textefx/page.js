@@ -17,10 +17,20 @@ const page = () => {
         <TextAnimation text='Animate from right' animationVariant='fromRight' />
       </section>
       <section>
-        <TextAnimation text='Aniamte from left' animationVariant='fromLeft' />
+        <TextAnimation text='Animate from left' animationVariant='fromLeft' />
       </section>
-      <section></section>
-      <section></section>
+      <section>
+        <TextAnimation
+          text='Animate from top to bottom'
+          animationVariant='fromTop'
+        />
+      </section>
+      <section>
+        <TextAnimation
+          text='Animate from bottom up'
+          animationVariant='fromBottom'
+        />
+      </section>
     </div>
   );
 };

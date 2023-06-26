@@ -32,6 +32,34 @@ const fromLeft = {
     },
   },
 };
+const fromTop = {
+  hidden: {
+    y: 500,
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      ease: 'easeOut',
+    },
+  },
+};
+const fromBottom = {
+  hidden: {
+    y: 500,
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      ease: 'easeOut',
+    },
+  },
+};
 
 const TextAnimation = ({ text, animationVariant }) => {
   const { ref: textRef, inView: textIsVisible, entry } = useInView();
