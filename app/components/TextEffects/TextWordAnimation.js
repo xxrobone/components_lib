@@ -1,45 +1,56 @@
 'use client';
-import React, { useRef, useEffect } from 'react';
-import styles from './EachLetter.module.scss';
+import React, { useRef, useState, useEffect } from 'react';
+import styles from './TextWordAnimation.module.scss';
 
-const EachLetterInTextAni = ({ text }) => {
-  const textRef = useRef();
-  const letterRef = useRef();
+const TextWordAnimation = ({ text }) => {
+  const [isIntersecting, setIsIntersecting] = useState(false);
+  const ref = useRef();
+  /* const letterRef = useRef(); */
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      console.log('entry ', entry);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsIntersecting(entry.isIntersecting);
+      },
+      { rootMargin: '-20px', threshold: 1 }
+    );
+    console.log(isIntersecting);
+    observer.observe(ref.current);
 
-      /* if (entry.isIntersecting) {
-        textRef.current.classList.add(`${styles.animate}`);
-        textRef.current.classList.add(`${styles.animate}`);
-        textRef.current.classList.remove(`${styles.stop}`);
-      } else {
-        textRef.current.classList.remove(`${styles.animate}`);
-        textRef.current.classList.add(`${styles.stop}`);
-      } */
+    return () => observer.disconnect();
+  }, [isIntersecting]);
 
-      /*    if (!entry.isIntersecting) {
-      observer.unobserve(entry);
+  useEffect(() => {
+    if (isIntersecting) {
+      ref.current.classList.add(`${styles.animate}`);
+      ref.current.classList.remove(`${styles.stop}`);
+      ref.current.querySelectorAll('span').forEach((el, i) => {
+        el.classList.add(`${styles.animate}`);
+        el.classList.add(`${styles.fadeInRight}`);
+        el.classList.remove(`${styles.stop}`);
+        el.style.animationDelay = `${i * 200}ms`;
+        el.style.display = 'inline-block';
+      });
     } else {
-    } */
-    });
-    observer.observe(textRef.current);
-  }, []);
+      ref.current.classList.remove(`${styles.animate}`);
+      ref.current.classList.add(`${styles.stop}`);
+      /*  ref.current.querySelectorAll('span').forEach((el) => {
+        console.log(el);
+        el.classList.remove(`${styles.animate}`);
+        el.classList.add(`${styles.stop}${styles.textSplit}`);
+      }); */
+    }
+  }, [isIntersecting]);
 
   return (
-    <h2 ref={textRef} className={`${styles.textToSplit} ${styles.fadeInRight}`}>
+    <h2
+      ref={ref}
+      className={`${styles.textSplit} ${styles.fadeInRight} ${styles.stop}`}
+    >
       {text.split(' ').map((word, idx) => {
         return (
-          <span key={idx} className={styles.word}>
-            {word.split('').map((letter, i) => {
-              return (
-                <span className={`${styles.textSplit}`} ref={letterRef} key={i}>
-                  {letter}
-                </span>
-              );
-            })}
+          <span key={idx} className={`${styles.stop}`}>
+            {word}
           </span>
         );
       })}
@@ -69,7 +80,7 @@ const EachLetterInTextAni = ({ text }) => {
   );
 };
 
-export default EachLetterInTextAni;
+export default TextWordAnimation;
 
 /* 
 The blue print from my portfolio website
@@ -137,38 +148,4 @@ function replaceClass(classN, newClassN) {
   let target = document.getElementsByClassName(`${classN}`)[1];
   target.className = newClassN;
 }
-*/
-
-/*
-const TextAnimation = ({ text }) => {
-  const { ref: textRef, inView: textIsVisible } = useInView();
-  const { ref: letterRef, inView: letterIsVisible } = useInView();
-
-  textIsVisible ? console.log('is visible') : console.log('not visible');
-  letterIsVisible
-    ? console.log('letter is visible')
-    : console.log('not visible');
-
-  return (
-    <h2
-      ref={textRef}
-      className={`${styles.textToSplit} ${styles.fadeInRight} ${
-        textIsVisible ? styles.stop : styles.animate
-      }`}
-    >
-      {text.split(' ').map((word, idx) => {
-        return (
-          <span key={idx}>
-            {word.split('').map((letter, i) => {
-              return (
-                <span className={`${styles.textSplit}`} ref={letterRef} key={i}>
-                  {letter}
-                </span>
-              );
-            })}
-          </span>
-        );
-      })}
-    </h2>
-
 */

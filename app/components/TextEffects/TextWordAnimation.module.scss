@@ -14,18 +14,18 @@
             animation-play-state: paused;
 }
 
-.word {
-    padding: 0 0.5rem;
-}
-
 .textSplit {
-    color: goldenrod;
-    font-weight: 700;
-    letter-spacing: 4px;
-}
 
-.textSplit:nth-child(even) {
-    color:#323232;
+    span {
+        padding: 0 0.25rem;
+        color: goldenrod;
+        font-weight: 700;
+        letter-spacing: 4px;   
+    }
+
+    :nth-child(even) {
+        color:#f75a11;
+    }
 }
 
 /* Slide Animations */
@@ -37,7 +37,7 @@
 .slideInLeft:nth-child(odd) {
     -webkit-animation-name: slideInLeft;
     animation-name: slideInLeft;
-        -webkit-transform: translateX(100vw);
+	    -webkit-transform: translateX(100vw);
     -ms-transform: translateX(100vw);
         transform: translateX(100vw);
 }
@@ -70,13 +70,13 @@ to {
 @-webkit-keyframes fadeInRight {
     from {
     opacity: 0;
-    -webkit-transform: translateX(2.5rem);
-    transform: translateX(2.5rem);
+    -webkit-transform: translateX(5rem);
+    transform: translateX(5rem);
 }
 to {
     opacity: 1;
-    -webkit-transform: none;
-    transform: none;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
 }}
 @keyframes fadeInRight {
     from {

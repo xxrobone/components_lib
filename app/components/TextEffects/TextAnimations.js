@@ -1,8 +1,7 @@
 'use client';
-import React, { useRef, useEffect } from 'react';
 import styles from './TextAnimation.module.scss';
 import { useInView } from 'react-intersection-observer';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const fromRight = {
   hidden: {
@@ -64,9 +63,9 @@ const fromBottom = {
 const TextAnimation = ({ text, animationVariant }) => {
   const { ref: textRef, inView: textIsVisible, entry } = useInView();
 
-  console.log(animationVariant);
+  /* console.log(animationVariant);
 
-  textIsVisible ? console.log('is visible') : console.log('not visible');
+  textIsVisible ? console.log('is visible') : console.log('not visible'); */
 
   // changing animations to framer motion
   return (
@@ -75,7 +74,9 @@ const TextAnimation = ({ text, animationVariant }) => {
       className={`${styles.textInView}`}
       variants={
         (animationVariant === 'fromRight' ? fromRight : null) ||
-        (animationVariant === 'fromLeft' ? fromLeft : null)
+        (animationVariant === 'fromLeft' ? fromLeft : null) ||
+        (animationVariant === 'fromTop' ? fromTop : null) ||
+        (animationVariant === 'fromBottom' ? fromBottom : null)
       }
       initial='hidden'
       animate={textIsVisible ? 'visible' : ''}

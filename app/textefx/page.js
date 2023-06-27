@@ -3,13 +3,17 @@ import { TitleEfx } from '../components/TextEffects/TitleEfx';
 import TextAnimation from '../components/TextEffects/TextAnimations';
 //styles
 import styles from './text.module.scss';
+import { AnimateEmoji } from '../components/TextEffects/AnimateEmoji';
+import { AnimatedParagraph } from '../components/TextEffects/AnimatedParagraph';
+import TextWordAnimation from '../components/TextEffects/TextWordAnimation';
 
 const page = () => {
   return (
     <div className={styles.texts}>
       <h2>Text effects</h2>
+      {/* <AnimatedParagraph /> */}
 
-      <div className={styles.component_wrapper}>
+      {/*  <div className={styles.component_wrapper}>
         <p>Hover to split text:</p>
         <TitleEfx title='The effect is in the text hover' />
       </div>
@@ -31,6 +35,15 @@ const page = () => {
           animationVariant='fromBottom'
         />
       </section>
+      <section>
+        <AnimateEmoji />
+      </section>
+  */}
+      <section></section>
+      <section><TextWordAnimation text='Hello World! WE GOOD?!' /></section>
+      <section></section> 
+      <section></section> 
+      <section><TextWordAnimation text='Man the hours I put in to get it right, but when i do... Yoohooo!!!' /></section> 
     </div>
   );
 };
