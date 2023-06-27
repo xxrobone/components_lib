@@ -1,8 +1,8 @@
 'use client';
 import React, { useRef, useState, useEffect } from 'react';
-import styles from './TextWordAnimation.module.scss';
+import './TextWordAnimation.scss';
 
-const TextWordAnimation = ({ text }) => {
+const TextWordAnimation = ({ text, animationStyle }) => {
   const [isIntersecting, setIsIntersecting] = useState(false);
   const ref = useRef();
   /* const letterRef = useRef(); */
@@ -22,18 +22,18 @@ const TextWordAnimation = ({ text }) => {
 
   useEffect(() => {
     if (isIntersecting) {
-      ref.current.classList.add(`${styles.animate}`);
-      ref.current.classList.remove(`${styles.stop}`);
+      ref.current.classList.add(`animate`);
+      ref.current.classList.remove(`stop`);
       ref.current.querySelectorAll('span').forEach((el, i) => {
-        el.classList.add(`${styles.animate}`);
-        el.classList.add(`${styles.fadeInRight}`);
-        el.classList.remove(`${styles.stop}`);
+        el.classList.add(`animate`);
+        el.classList.add(animationStyle);
+        el.classList.remove(`stop`);
         el.style.animationDelay = `${i * 200}ms`;
         el.style.display = 'inline-block';
       });
     } else {
-      ref.current.classList.remove(`${styles.animate}`);
-      ref.current.classList.add(`${styles.stop}`);
+      ref.current.classList.remove(`animate`);
+      ref.current.classList.add(`stop`);
       /*  ref.current.querySelectorAll('span').forEach((el) => {
         console.log(el);
         el.classList.remove(`${styles.animate}`);
@@ -43,13 +43,10 @@ const TextWordAnimation = ({ text }) => {
   }, [isIntersecting]);
 
   return (
-    <h2
-      ref={ref}
-      className={`${styles.textSplit} ${styles.fadeInRight} ${styles.stop}`}
-    >
+    <h2 ref={ref} className={`textSplit ${animationStyle} stop`}>
       {text.split(' ').map((word, idx) => {
         return (
-          <span key={idx} className={`${styles.stop}`}>
+          <span key={idx} className={`stop}`}>
             {word}
           </span>
         );

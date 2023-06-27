@@ -40,10 +40,27 @@ const page = () => {
       </section>
   */}
       <section></section>
-      <section><TextWordAnimation text='Hello World! WE GOOD?!' /></section>
-      <section></section> 
-      <section></section> 
-      <section><TextWordAnimation text='Man the hours I put in to get it right, but when i do... Yoohooo!!!' /></section> 
+      <section>
+        <TextWordAnimation
+          text='Hello World! WE GOOD?!'
+          animationStyle='fadeInRight'
+        />
+      </section>
+      <section></section>
+      <section>
+        <TextWordAnimation
+          text='Slide in from left Yoohooo!!!'
+          animationStyle='slideInLeft'
+        />
+      </section>
+      <section></section>
+      <section>
+        {' '}
+        <TextWordAnimation
+          text='Highlighting the text!!! A Bit longer what happends?'
+          animationStyle='highlightText'
+        />
+      </section>
     </div>
   );
 };

@@ -5,8 +5,9 @@
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+            animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .stop {
@@ -30,36 +31,41 @@
 
 /* Slide Animations */
 .slideInLeft {
-    -webkit-animation-name: slideInLeft;
-    animation-name: slideInLeft;	   
+    -webkit-animation-name: slideLeft;
+    animation-name: slideLeft;	   
+    /* -webkit-transform: translateX(50vw);
+    -ms-transform: translateX(50vw);
+        transform: translateX(50vw); */
+        opacity: 0;
 }
 
 .slideInLeft:nth-child(odd) {
-    -webkit-animation-name: slideInLeft;
-    animation-name: slideInLeft;
-	    -webkit-transform: translateX(100vw);
-    -ms-transform: translateX(100vw);
-        transform: translateX(100vw);
+    -webkit-animation-name: slideLeft;
+    animation-name: slideLeft;
 }
 
-@-webkit-keyframes slideInLeft {
+@-webkit-keyframes slideLeft {
     from {
-        -webkit-transform: translateX(-100vw);
-        transform: translateX(-100vw);
+        -webkit-transform: translateX(50vw);
+        transform: translateX(50vw);
+        opacity: 1;
 }
 to {
     -webkit-transform: translateX(0);
     transform: translateX(0);
+    opacity: 1;
 }}
 
-@keyframes slideInLeft {
+@keyframes slideLeft {
     from {
-        -webkit-transform: translateX(-100vw);
-        transform: translateX(-100vw);
+        -webkit-transform: translateX(50vw);
+        transform: translateX(50vw);
+        opacity: 1;
 }
 to {
     -webkit-transform: translateX(0);
     transform: translateX(0);
+    opacity: 1;
 }}
 /* ---------------------- */
 
@@ -70,8 +76,8 @@ to {
 @-webkit-keyframes fadeInRight {
     from {
     opacity: 0;
-    -webkit-transform: translateX(5rem);
-    transform: translateX(5rem);
+    -webkit-transform: translateX(-20rem);
+    transform: translateX(-20rem);
 }
 to {
     opacity: 1;
@@ -81,8 +87,8 @@ to {
 @keyframes fadeInRight {
     from {
     opacity: 0;
-    -webkit-transform: translateX(2.5rem);
-    transform: translateX(2.5rem);
+    -webkit-transform: translateX(-20rem);
+    transform: translateX(-20rem);
 }
 to {
     opacity: 1;
@@ -93,17 +99,17 @@ to {
 
 .highlightText:nth-child(odd){  
     padding:0 10px;
-    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #575757), color-stop(50%, transparent));
-    background: -o-linear-gradient(left, #575757 50%, transparent 50%);
-    background: linear-gradient(to right, #575757 50%, transparent 50%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #11606e9a), color-stop(50%, transparent));
+    background: -o-linear-gradient(left, #088d999a 50%, transparent 50%);
+    background: linear-gradient(to right, #07878b9a 50%, transparent 50%);
     background-size: 200% 100%;
     background-position: right bottom;
-    -webkit-animation-name: hilight;
-    animation-name: hilight;
+    -webkit-animation-name: highlight;
+    animation-name: highlight;
 
 }
 
-@-webkit-keyframes hilight{
+@-webkit-keyframes highlight{
 0% {
 }
 100% {
@@ -112,7 +118,7 @@ to {
 
 }
 
-@keyframes hilight{
+@keyframes highlight{
 0% {
 }
 100% {
