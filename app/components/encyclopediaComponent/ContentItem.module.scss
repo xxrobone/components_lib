@@ -1,0 +1,174 @@
+.item_wrapper {
+    border: 1px solid #888;
+    margin: 2rem 4rem;
+    border-radius: 10px;
+    padding: 5rem 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row: 1fr auto;
+
+  
+    >.left_side {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 5rem 8rem 3rem;
+      font-weight: 800;   
+
+      h2 {
+        color: #fafafa;
+        text-shadow: 0 4px 3px rgba(0,0,0,.825);
+        font-size: 1.4rem;
+        font-weight: 200;
+    }
+    
+    .image {
+      border-radius: 10px;
+      position: relative;
+      margin: 2rem 0;
+      width: 380px;
+      height: 300px;
+      overflow: hidden;
+      border: 3px solid transparent;
+      transition: all 0.4s ease-in-out;
+
+      &:hover {
+        border: 3px solid rgb(223, 80, 14)
+      }
+
+      > img {
+        object-fit: cover;
+        object-position: center;
+        border-radius: inherit;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {          
+          cursor: pointer;
+          transform: scale(1.1);
+
+         
+        }
+      }
+    }
+  }
+  
+  .content {
+  max-width: 800px;
+  padding: 8rem 6rem 2rem 0;
+  
+  .aka {
+  color: orangered;
+  font-weight: 800;
+  font-size: 1.4rem;
+  
+  
+  }
+  
+  .text {
+  margin-top: 2rem;
+  font-size: 1rem;
+  font-weight: 400;
+  }
+  
+  
+  
+  section li {
+  margin: 15px 0px 0px 20px;
+  
+  }
+  }
+  }
+
+
+
+@media screen and (max-width: 1260px) {
+
+    .item_wrapper {    
+      margin: 0.5rem;   
+        padding: 10rem 2rem 0;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-row: 1fr auto;
+    
+        >.left_side {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          flex-direction: column;
+          padding: 5rem 2rem 2rem;
+          font-weight: 800; 
+    
+          h2 {
+              margin-left: 1rem;
+              font-size: 1.5rem;
+          }
+          
+          .image {
+            width: 280px;
+            height: 280px;
+          }
+    }
+    
+    .content {
+    max-width: 100%;
+    padding: 8rem 2rem 0;
+    
+    .aka {
+      font-size: 1.2rem;
+    }
+    
+    .text {
+      font-size: 0.9rem;
+    }
+    }
+  }
+  }
+  
+
+ @media screen and (max-width: 960px) {     
+
+      .item_wrapper {   
+        padding: 12rem 0 0;    
+          display: flex;
+          flex-direction: column;
+             
+          h1 {
+              text-align: left;
+              font-size: 1.4rem;
+              font-weight: thin;
+              text-transform: uppercase;
+            }
+      
+          >.left_side {
+              padding: 0;
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .image {
+                border-radius: 0;
+              width: 100%;
+              height: 300px;
+
+              img {
+                height: 100%;
+                object-position: center;
+              }
+            }
+      }
+      
+      .content {
+      width: 100%;
+      padding: 0 2rem;
+      
+      .aka {
+        font-size: 0.8rem;
+      }
+      
+      .text {
+        font-size: 0.9rem;
+      }
+      }
+    }
+  }

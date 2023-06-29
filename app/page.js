@@ -37,6 +37,12 @@ export default function Home() {
           url='/textefx'
           className={styles.desc}
         />
+        <NavItem
+          title='encyclopedia'
+          icon={<HiOutlineQueueList />}
+          url='/encyclopedia'
+          className={styles.desc}
+        />
         <div>
           <a
             href='https://robertwagar.se'
