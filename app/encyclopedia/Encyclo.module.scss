@@ -15,4 +15,10 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+
+    @media  screen and (max-width: 980px) {
+        margin: 0 auto;
+        left: 0;
+        width: 95%;        
+    }
   }

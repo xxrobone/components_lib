@@ -129,9 +129,10 @@
  @media screen and (max-width: 960px) {     
 
       .item_wrapper {   
-        padding: 12rem 0 0;    
+          padding: 2rem 0 2rem;    
           display: flex;
           flex-direction: column;
+          height: 100%;
              
           h1 {
               text-align: left;
