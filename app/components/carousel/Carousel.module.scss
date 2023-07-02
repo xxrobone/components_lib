@@ -1,25 +1,37 @@
-.slider {
-    margin: 1rem auto;
-    max-height: 400px;
-    position: relative;
-    overflow: hidden;
+/* .slider {
+  position: relative;
+  width: 100svw;
+  height: 80svh;
+  overflow: hidden;
 
-    @media screen and (min-width: 768px) {
-        width: 400px;
-        height: auto;
+    @media screen and (min-width: 960px) {
+        margin: 20vh auto;
+        height: 480px;
+        width: calc(100svw - 35%);
   }
 
     ::-webkit-scrollbar { 
         width: 0;
         height: 0;
     }
-  }
+  } */
   
   .slide_container {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: calc(100vh - 2rem);    
+    position: relative;
+    margin: 0 auto;
+    width: 100svw;
+    height: 80svh;
+    overflow: hidden;
+
+    @media screen and (min-width: 960px) {
+        height: 480px;
+    width: calc(100svw - 35%);
+  }
+
+    ::-webkit-scrollbar { 
+        width: 0;
+        height: 0;
+    }  
     display: flex;
     list-style: none;
     overflow: scroll;
@@ -31,33 +43,30 @@
   
   .slide {
     position: relative;
-    width: 100%;
-    height: 100%;
     flex: 1 0 100%;
     display: grid;
     place-content: center;
-    padding: 5rem;
+    padding: 0rem;
     scroll-snap-align: start;
+    box-shadow: inset 2px 2px 15px 0px #1d1d1d;
+    background: linear-gradient( 45deg, #141414, #1f0f05 );
 
-    @media screen and (min-width: 768px) {
-     padding: 2rem;
+&:hover {
+  box-shadow: 0 0 3px 5px #fff, 5px 5px 10px 3px #c2200bd0, -5px -5px 10px 5px #c2200bd0;
+  transition: 120ms ease-out;
 }
   }
   
   .slide > img {
-    margin: 0 auto;
-    width: 300px;
-    height: auto;
-
-    @media screen and (min-width: 768px) {
-            width: 100vw;
-            height: auto;
-      }
+    max-width: 100svw;
+    max-height: 80svh;
+    object-fit: cover;
+    object-position: center;
   }
 
   .slide h2 {
     position: absolute;
-    top: 0;
+    top: 2rem;
     left: 3rem;
     padding: 0;
     width: 60%;
@@ -78,15 +87,15 @@
   }
 
   .slide_arrow {
+    margin: 0;
     position: absolute;
-    top: 0;
+    top: 45%;
     bottom: 0;
     z-index: 10;
-    margin: auto;
-    width: 4rem;
-    padding: 0;
-    height: 4rem;
-    display: flex;
+    width: 56px;
+    height: 56px;
+    display: grid;
+    place-content: center;
     background-color: rgba(41, 122, 118, 0.56);
     border: none;
     font-size: 3rem;
@@ -101,15 +110,13 @@
   }
   
   .prev_btn {
-    left: 0;
-    text-align: center;
-    padding-left: 1.5rem;
-    padding-bottom: 1rem;
+    left: 2rem;
+    padding: 0 0.25rem 0.5rem 0;
     border-radius: 50%;
   }
   
   .next_btn {
-    right: 0;
-    padding-left: 1.5rem;
+    right: 2rem;
+     padding: 0 0 0.5rem 0.25rem;
     border-radius: 50%;
   }

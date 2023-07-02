@@ -21,21 +21,25 @@ const page = () => {
   };
 
   return (
-    <div className={styles.slider}>
+    <div className={styles.slider_wrapper}>
       <h2>Carousel / slider</h2>
 
       <Carousel handleNext={handleNext} handlePrevious={handlePrevious}>
-        {carouselData.map((c, i) => {
-          if (index === i) {
-            return (
-              <div key={c.id}>
-                <CarouselItem {...c} />
-              </div>
-            );
-          } else {
-            return null;
-          }
-        })}
+        {carouselData ? (
+          carouselData.map((c, i) => {
+            if (index === i) {
+              return (
+                <div key={c.id}>
+                  <CarouselItem {...c} />
+                </div>
+              );
+            } else {
+              return null;
+            }
+          })
+        ) : (
+          <span></span>
+        )}
       </Carousel>
     </div>
   );

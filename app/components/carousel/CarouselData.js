@@ -1,12 +1,12 @@
-import Link1Img from 'public/images/astroHome.png';
-import Link2Img from 'public/images/astroAbout.jpeg';
-import Link3Img from 'public/images/astroProjects.jpg';
-import Link4Img from 'public/images/astroRocket.jpg';
-import Link5Img from 'public/images/astroContact.jpg';
+import Link1Img from 'public/images/beauty.jpg';
+import Link2Img from 'public/images/boombox.jpg';
+import Link3Img from 'public/images/holistic.jpg';
+import Link4Img from 'public/images/eighties.jpg';
+import Link5Img from 'public/images/childplay.jpg';
 
 export const carouselData = [
   {
-    title: 'title',
+    title: 'Nature',
     text: 'desc text',
     id: 1,
     img: Link1Img,

@@ -8,6 +8,7 @@ export default function Toc() {
   return (
     <>
       <div className={styles.toc}>
+        <h2 className={styles.list_headline}>bio list</h2>
         <ul>
           {data.map(({ id, name, href }, i) => (
             <motion.li

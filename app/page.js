@@ -12,7 +12,7 @@ import {
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
+     {/*  <div className={styles.description}>
         <NavItem
           title='Component collection'
           icon={<HiArrowDownCircle />}
@@ -43,32 +43,16 @@ export default function Home() {
           url='/encyclopedia'
           className={styles.desc}
         />
-        <div>
-          <a
-            href='https://robertwagar.se'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            By{' '}
-            <Image
-              src='/rob1.png'
-              alt='Robone logo'
-              className={styles.roboneLogo}
-              width={100}
-              height={100}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+        <div> */}
+     {/*  </div> */}
 
       <div className={styles.center}>
         <Image
           className={styles.logo}
           src='/astroHome.png'
           alt='Astro universe'
-          width={400}
-          height={400}
+          width={300}
+          height={300}
           priority
         />
       </div>

@@ -1,12 +1,12 @@
 'use client';
 import React from 'react';
-import ContentItem from './ContentItem';
+import ContentItem from './PersonItem';
 // styles
-import styles from './ContentList.module.scss';
+import styles from './CollectionList.module.scss';
 
-const ContentList = ({ data }) => {
+const CollectionList = ({ data }) => {
   return (
-    <div className={styles.content_list}>
+    <div className={styles.list}>
       {data.map((data, i) => (
         // item here
         <div key={data.id}>
@@ -17,4 +17,4 @@ const ContentList = ({ data }) => {
   );
 };
 
-export default ContentList;
+export default CollectionList;

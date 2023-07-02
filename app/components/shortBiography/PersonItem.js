@@ -4,8 +4,8 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 // styles
-import styles from './ContentItem.module.scss';
-const ContentItem = ({ name, desc, aka, id, img }, i) => {
+import styles from './PersonItem.module.scss';
+const PersonItem = ({ name, desc, aka, id, img }, i) => {
   return (
     <motion.div
       initial={{ y: -50, opacity: 0 }}
@@ -34,4 +34,4 @@ const ContentItem = ({ name, desc, aka, id, img }, i) => {
   );
 };
 
-export default ContentItem;
+export default PersonItem;
