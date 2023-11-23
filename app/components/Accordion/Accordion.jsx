@@ -15,12 +15,25 @@ export default function Accordion(props) {
 
   const Title = () => (
     <motion.button
+      className={styles.button}
       onClick={handleToggle}
       initial={false}
       animate={{ backgroundColor: isOpen ? '#333333' : 'black' }}
+      layout
+      style={
+        isOpen
+          ? { borderBottomLeftRadius: '0px', borderBottomRightRadius: '0px' }
+          : ''
+      }
     >
       {title}
-      <span>{isOpen ? <FiArrowUpCircle /> : <FiArrowDownCircle />}</span>
+      <motion.span
+              whileHover={{
+           color: '#fff'
+        }}
+      >
+        {isOpen ? <FiArrowUpCircle /> : <FiArrowDownCircle />}
+      </motion.span>
     </motion.button>
   );
 

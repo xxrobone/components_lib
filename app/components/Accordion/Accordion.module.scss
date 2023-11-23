@@ -6,7 +6,6 @@
     margin-top: 10vh;
     display: grid;
     place-content: center;
-
 }
 
 .accordion_wrapper {
@@ -22,8 +21,9 @@
 
 .accordion h1 {
     text-align: center;
+    font-family: monospace;
 }
-.accordion button {
+.button {
     width: 100%;
     display: flex;
     align-items: center;
@@ -31,23 +31,27 @@
     padding: 0.25rem 0.5rem;
     border: none;
     border-radius: 5px;
+    font-family: monospace;
     font-size: 1rem;
     cursor: pointer;
+
+    >span {
+        display: grid;
+        place-content: center;
+        color: #888;
+    }
 }
 
-.accordion button:hover {
-    background-color: rgb(230, 230, 230);
+.button:hover {
+    background-color: rgb(22, 22, 22);
     filter: drop-shadow(0 0 4px rgba(0,0,0,0.225));
-}
-
-.accordion button .active {
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
 }
 
 .answer {
     padding: 0.25rem 0.5rem;
-    background-color: #282828;
+    font-family: monospace;
+    background-color: #000000;
     color: #f8f4f2;
-    border-bottom: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
