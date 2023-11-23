@@ -1,0 +1,115 @@
+.header {
+    font-family: 'EB Garamond', serif;
+    font-size: 3.5em;
+    color: var(--orange-red);
+    text-align: center;
+    padding: 1em 0;
+    font-weight: 200;
+  }
+  
+  .loading,
+  .error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    margin: 3em;
+  }
+  
+  .restaurant-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0 2em;
+    margin: 0;
+    line-height: 0.3em;
+  
+    .restaurant-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 35px;
+    }
+  
+    .restaurant-item {
+      flex: 1;
+      max-width: 25%;
+  
+      .overlay-effect {
+        position: relative;
+      }
+      
+      .overlay-effect::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--orange-red);
+        mix-blend-mode: soft-light;
+        opacity: .6;
+      }
+  
+      .restaurant-item-img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+      }
+  
+      .name {
+        margin-top: 2em;
+      }
+  
+      .link {
+        margin-top: 3em;
+      }
+  
+      .cuisine {
+        margin-top: 3em;
+      }
+  
+      .cuisine-item-0,
+      .cuisine-item-1 {
+        border: 1px solid var(--orange-red);
+        border-radius: 20px;
+        padding: 10px 20px;
+        margin-right: 0.5em;
+      }
+  
+      a {
+        color: var(--orange-red);
+        text-decoration: underline;
+      }
+    }
+  
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin: 4em;
+    
+      .link-button {
+        border: 1px solid var(--orange-red);
+        border-radius: 50px;
+        padding: 20px 30px;
+        margin-right: 0.5em;
+        background-color: transparent;
+        color: var(--orange-red);
+        font-family: 'Inter', sans-serif;
+        font-weight: 200;
+        font-size: 3em;
+        cursor: pointer;
+      }
+      
+      .link-button:hover {
+        background-color:var(--orange-red);
+        color: var(--off-white);
+      }
+    }
+    
+   
+    @media screen and (max-width: 768px) {
+      .restaurant-item {
+        max-width: 100%;
+      }
+    }
+  }

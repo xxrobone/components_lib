@@ -128,15 +128,16 @@ const SwipeableCarousel = () => {
             transitionX :{swipeInfo.transitionX} <br />
             current : {current} <br />
             {current === i ? (
- <Image
- alt={c.title}
- src={c.img}
- priority
- fill
- sizes="(min-width: 960px) 600px, auto"
-/>
-            ) : ''}
-           
+              <Image
+                alt={c.title}
+                src={c.img}
+                priority
+                fill
+                sizes='(min-width: 960px) 600px, auto'
+              />
+            ) : (
+              ''
+            )}
           </div>
         ))}
       </div>

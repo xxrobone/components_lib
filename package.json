@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --port 3400",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -16,7 +16,8 @@
     "react-icons": "^4.8.0",
     "react-intersection-observer": "^9.5.1",
     "sass": "^1.62.1",
-    "styled-components": "^6.0.0-rc.1"
+    "styled-components": "^6.0.0-rc.1",
+    "swr": "^2.2.4"
   },
   "devDependencies": {
     "@types/node": "20.2.0",

@@ -11,9 +11,9 @@ const page = () => {
   return (
     <div className={styles.texts}>
       <h2>Text effects</h2>
-      {/* <AnimatedParagraph /> */}
+      <AnimatedParagraph />
 
-      {/*  <div className={styles.component_wrapper}>
+       <div className={styles.component_wrapper}>
         <p>Hover to split text:</p>
         <TitleEfx title='The effect is in the text hover' />
       </div>
@@ -38,7 +38,7 @@ const page = () => {
       <section>
         <AnimateEmoji />
       </section>
-  */}
+ 
       <section></section>
       <section>
         <TextWordAnimation

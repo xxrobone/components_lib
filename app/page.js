@@ -8,6 +8,7 @@ import {
   HiArrowDownCircle,
   HiArchiveBoxArrowDown,
 } from 'react-icons/hi2';
+import ExpandableCard from './components/expandable-card/ExpandableCard';
 
 export default function Home() {
   return (
@@ -56,7 +57,7 @@ export default function Home() {
           priority
         />
       </div>
-
+        <ExpandableCard />
       <div className={styles.grid}>
         <a
           href='https://github.com/xxrobone/components_lib'

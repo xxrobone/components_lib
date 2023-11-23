@@ -89,6 +89,12 @@ export default function RootLayout({ children }) {
                 url='/shortbios'
                 className={styles.desc}
               />
+              <DropDownItem
+                title='Accordion'
+                icon={<HiOutlineQueueList />}
+                url='/accordion'
+                className={styles.desc}
+              />
             </DropDown>
           </NavItem>
         </div>
